@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/footer/add_todo.dart';
 import 'package:todo_app/todo_list/todo_list.dart';
 
 void main() {
@@ -18,7 +19,8 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.green,
         ),
-        body: TodoList()
+        body: TodoList(),
+        persistentFooterButtons: [AddTodo()],
       ),
     );
   }
