@@ -8,7 +8,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
-  List _list = [1, 2, 3, 4, 5];
+  List _list = [1,2,3];
 
   @override
   Widget build(BuildContext context) {
@@ -21,8 +21,12 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.green,
         ),
-        body: TodoList(_list),
-        persistentFooterButtons: [AddTodo()],
+        body: Column(
+          children: [
+            Expanded(child: TodoList(_list)),
+            AddTodo(_list)
+          ],
+        )
       ),
     );
   }
